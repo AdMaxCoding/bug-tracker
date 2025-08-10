@@ -1,0 +1,88 @@
+### GET / 
+http://localhost:5000
+
+### Register a user POST /AUTH/REGISTER
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "adib@gmail.com",
+    "password": "sickomode"
+}
+
+### Login a user POST /AUTH/LOGIN
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "adib@gmail.com",
+    "password": "sickomode"
+}
+
+### fetch all projects 
+GET http://localhost:5000/projects
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+
+### Get single project by ID (protected)
+GET http://localhost:5000/projects/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+
+### Creates a new project (protected)
+POST http://localhost:5000/projects
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+Content-Type: application/json
+
+{
+    "name": "Bug Tracker Backend",
+    "description": "Backend service for tracking issues and projects"
+}
+
+### Update a project (protected)
+PUT http://localhost:5000/projects/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+Content-Type: application/json
+
+{
+    "name": "Bug Tracker API",
+    "description": "Updated description"
+}
+
+### Delete a project (protected)
+DELETE  http://localhost:5000/projects/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzOTE2NDYwLCJleHAiOjE3NTQwMDI4NjB9.IMehQaGx7JTFN0bQuxn_ZbUBTPDBMW-2AHV1C_wzH5Q
+
+### Get all issues (protected)
+GET http://localhost:5000/issues
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+
+### Create a new issue (protected)
+POST http://localhost:5000/issues
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+Content-Type: application/json
+
+{
+  "title": "Fix login bug",
+  "description": "Login fails when JWT expires",
+  "status": "open",
+  "priority": "medium",
+  "projectId": 1
+}
+
+### Get single issue by ID (protected)
+GET http://localhost:5000/issues/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+
+### Update an issue (protected)
+PUT http://localhost:5000/issues/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
+Content-Type: application/json
+
+{
+    "title": "Fix JWT refresh bug",
+    "description": "Users can't refresh JWT without re-login",
+    "status": "in_progress"
+}
+
+### Delete an issue (protected)
+DELETE http://localhost:5000/issues/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NzU4NDE4LCJleHAiOjE3NTQ4NDQ4MTh9.ej5WJDnemm66zq3Eo7yCx0m_4NTDF9aM6jf28igo64s
