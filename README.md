@@ -1,2 +1,15 @@
-# bug-tracker
-Backend API for a bug tracking system with user auth, project management, and issue tracking, built with Node.js, Express, Prisma, PostgreSQL, and Docker.
+Bug Tracker Backend
+Backend API for a bug tracking system with user authentication, project management, and issue tracking.
+Built with Node.js, Express, Prisma ORM, PostgreSQL, and Docker.
+
+Features
+JWT based user authentication
+
+Create and manage projects
+
+Track and assign issues
+
+Dockerized setup for quick deployment
+
+Tech Stack
+Node.js, Express, Prisma ORM, PostgreSQL, JWT, Docker
